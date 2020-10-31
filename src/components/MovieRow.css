@@ -11,7 +11,7 @@
 .movieRow--list{
     width: 9999999999px;
 }
-.movieRow--item{
+.movieRow--item{    
     display: inline-block;
     width: 150px;
     cursor: pointer;
