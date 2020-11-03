@@ -4,7 +4,7 @@ import NavigateBeforeIcon from '@material-ui/icons/NavigateBefore';
 import NavigateNextIcon from '@material-ui/icons/NavigateNext';
 export default ({ title, items }) => {
 
-    const [scrollX, setScrollX]= useState(-400)
+    const [scrollX, setScrollX]= useState(0)
 
     const handleLeftArrow= ()=>{
         let x = scrollX + Math.round(window.innerWidth/2);
@@ -16,7 +16,7 @@ export default ({ title, items }) => {
     const handleRightArrow= ()=>{
         let x = scrollX - Math.round(window.innerWidth/2);
         let listw = items.results.length * 150
-        if((window.innerWidth - listw)>0){
+        if((window.innerWidth - listw)>x){
             x = (window.innerWidth-listw)- 60
         }
         setScrollX(x)
